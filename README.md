@@ -1,5 +1,5 @@
 # ShrugItOff
-Minecraft mod that gives Toughness more purpose. Any normal physcial damage has a chance to be "shrugged off", based on the toughness of the target.
+Minecraft mod that gives Toughness more purpose. Any normal physical damage has a chance to be "shrugged off", based on the toughness of the target.
 Current formula is:
 
     CHANCE = 10% * Toughness/Damage
