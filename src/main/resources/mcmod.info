@@ -1,0 +1,15 @@
+[
+{
+  "modid": "shrugitoff",
+  "name": "Tink!",
+  "description": "Based on Mod Tutorial by McJty",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["lumberjacksparrow","McJty"],
+  "credits": "McJty",
+  "logoFile": "",
+  "screenshots": []
+}
+]
