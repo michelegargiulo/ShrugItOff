@@ -1,0 +1,15 @@
+[
+  {
+    "modid": "shrugitoff",
+    "name": "Shrug It Off!",
+    "description": "Based on Mod Tutorial by McJty",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": ["lumberjacksparrow", "SmokeyTheBandicoot", "McJty"],
+    "credits": "lumberjacksparrow, McJty",
+    "logoFile": "",
+    "screenshots": []
+  }
+]
