@@ -9,6 +9,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import shrugitoff.tink.ShrugItOff;
 
 import javax.swing.text.DefaultEditorKit;
+import java.util.Arrays;
+import java.util.HashSet;
 
 @Config(modid = ShrugItOff.MODID, category="General", name=ShrugItOff.MODID)
 @Mod.EventBusSubscriber
@@ -18,6 +20,9 @@ public class ModConfig {
 
     @Config.Ignore
     private static ModConfig INSTANCE = null;
+
+    @Config.Ignore
+    public static HashSet<String> excludedItems = new HashSet<>();
 
     public static ModConfig getInstance() {
         if (INSTANCE == null)
@@ -87,6 +92,20 @@ public class ModConfig {
             "witherSkull"
     };
 
+    @Config.Name("itemBlacklist")
+    @Config.LangKey(ShrugItOff.MODID + ".config.item_blacklist")
+    @Config.Comment("For any item specified in this list, ShrugItOff will not apply any modification. Useful to exclude " +
+            "items that have special behaviours, like Avaritia Infinity Tools. " +
+            "Format is MODID:ITEM:METADATA. Metadata is optional")
+    public static String[] itemBlacklist = new String[] {
+            "avaritia:infinity_sword",
+            "avaritia:infinity_pickaxe",
+            "avaritia:infinity_axe",
+            "avaritia:infinity_shovel",
+            "avaritia:infinity_hoe",
+            "avaritia:infinity_bow",
+    };
+
     @Config.Name("smallDamageSources")
     @Config.LangKey(ShrugItOff.MODID + ".config.small_damage_sources")
     @Config.Comment({"Small damage sources for which the sound will not be played. Leave empty to always make a sound.",
@@ -107,6 +126,12 @@ public class ModConfig {
     {
         if (event.getModID().equals(ShrugItOff.MODID)) {
             ConfigManager.sync(ShrugItOff.MODID, Config.Type.INSTANCE);
+            reloadItemExclusions();
         }
+    }
+
+    private static void reloadItemExclusions() {
+        excludedItems.clear();
+        excludedItems.addAll(Arrays.asList(itemBlacklist));
     }
 }

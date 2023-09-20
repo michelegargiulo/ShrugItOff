@@ -1,16 +1,14 @@
 package shrugitoff.tink;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.ai.attributes.AbstractAttributeMap;
 import net.minecraft.entity.ai.attributes.IAttributeInstance;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvent;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.*;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
-import net.minecraftforge.event.terraingen.SaplingGrowTreeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import shrugitoff.tink.config.ModConfig;
@@ -26,31 +24,57 @@ public class LivingAttackEventHandler {
     @SubscribeEvent
     public static void onLivingAttackEvent(LivingAttackEvent event) {
 
-        // Get entity and world
+        // Retrieve Entity
         EntityLivingBase livingEntity = event.getEntityLiving();
+
+        if (livingEntity == null) return;
+
+        // Retrieve World
         World world = livingEntity.world;
+
+        // Chance to completely shrug off any blockable, physical damage if the entity has any toughness
+        DamageSource source = event.getSource();
+        float amount = event.getAmount();
+
+        // Retrieve attacker, to check what's in their hand and compare against the item blacklist
+        Entity attacker = source.getTrueSource();
 
         // If world is remote, return
         if(world.isRemote) {
             return;
         }
 
-        // Log damage source
-        if (ModConfig.logDamageSources) {
-            ShrugItOff.logger.debug(String.format("Entity %s has been dealt %s amount of %s damage",
-                    event.getEntityLiving().getDisplayName(),
-                    event.getAmount(),
-                    event.getSource().getDamageType()));
-
-            livingEntity.sendMessage(new TextComponentString(String.format("Entity %s has been dealt %s amount of %s damage",
-                    event.getEntityLiving().getName(),
-                    event.getAmount(),
-                    event.getSource().getDamageType())));
+        // If it is an excluded item, return
+        if (attacker instanceof EntityLivingBase) {
+            EntityLivingBase elbAttacker = (EntityLivingBase)attacker;
+            ItemStack attackItem = elbAttacker.getHeldItem(EnumHand.MAIN_HAND);
+            int metadata = 0;
+            String regName = attackItem.getItem().getRegistryName().toString();
+            if (ModConfig.excludedItems.contains(regName) || ModConfig.excludedItems.contains(regName + ":" + metadata)) {
+                if (ModConfig.logDamageSources) {
+                    ShrugItOff.logger.debug(String.format("Blacklist contains item %s: ShrugItOff will ignore this attack.", regName + ":" + metadata));
+                }
+                return;
+            }
         }
 
-        // Chance to completely shrug off any blockable, physical damage if the entity has any toughness
-        DamageSource source = event.getSource();
-        float amount = event.getAmount();
+        // Log damage source
+        if (ModConfig.logDamageSources) {
+
+            String msg = String.format("Entity %s has been dealt %s amount of %s damage",
+                        event.getEntityLiving().getDisplayName(),
+                        event.getAmount(),
+                        event.getSource().getDamageType()
+                    );
+
+            ShrugItOff.logger.debug(msg);
+
+            if (attacker != null)
+                attacker.sendMessage(new TextComponentString(msg));
+
+            if (livingEntity != null)
+                livingEntity.sendMessage(new TextComponentString(msg));
+        }
 
         // No damage, no tink.
         if (amount == 0) { return; }

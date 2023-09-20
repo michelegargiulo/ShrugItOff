@@ -6,13 +6,9 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.network.NetworkRegistry;
 import org.apache.logging.log4j.Logger;
 import shrugitoff.tink.config.ModConfig;
 import shrugitoff.tink.proxy.CommonProxy;
-import sun.net.NetworkServer;
-
-import javax.security.auth.login.Configuration;
 
 
 @Mod(modid = ShrugItOff.MODID,

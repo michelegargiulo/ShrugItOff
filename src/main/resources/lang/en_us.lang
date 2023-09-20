@@ -1,0 +1,4 @@
+shrugitoff.config.log_damage_sources=Log Damage Sources
+shrugitoff.config.use_whitelist=Use Whitelist
+shrugitoff.config.whitelist=Whitelist
+shrugitoff.config.blacklist=Blacklist

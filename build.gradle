@@ -21,8 +21,8 @@ repositories {
 
 }
 
-version = "0.0.1"
-group= "mcjty.shrugitoff"
+version = "0.0.5"
+group= "shrugitoff"
 archivesBaseName = "shrugitoff"
 
 sourceCompatibility = 1.8
@@ -31,7 +31,7 @@ targetCompatibility = 1.8
 minecraft {
     version = "1.12.2-14.23.5.2847"
     runDir = "run"
-    mappings = "snapshot_20170801"
+    mappings = "stable_39"
     useDepAts = true
 }
 
