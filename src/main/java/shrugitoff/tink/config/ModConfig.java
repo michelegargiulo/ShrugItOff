@@ -16,7 +16,9 @@ import java.util.HashSet;
 @Mod.EventBusSubscriber
 public class ModConfig {
 
-    private ModConfig() { }
+    private ModConfig() {
+        reloadItemExclusions();
+    }
 
     @Config.Ignore
     private static ModConfig INSTANCE = null;
