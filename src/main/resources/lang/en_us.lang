@@ -1,4 +1,12 @@
 shrugitoff.config.log_damage_sources=Log Damage Sources
+shrugitoff.config.log_chances=Log Chances
 shrugitoff.config.use_whitelist=Use Whitelist
 shrugitoff.config.whitelist=Whitelist
 shrugitoff.config.blacklist=Blacklist
+shrugitoff.config.disable_sound=Disable Sound
+shrugitoff.config.small_damage_sources=Small Damage Sources
+shrugitoff.config.item_blacklist=Item Blacklist
+shrugitoff.config.old_formula_base=Old formula Base value
+shrugitoff.config.old_formula_cap=Old formula maximum Dodge value
+shrugitoff.config.enable_new_formula=Enable new formula
+shrugitoff.config.new_formula_toughness_factor=New formula Toughness Factor

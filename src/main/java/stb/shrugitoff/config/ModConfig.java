@@ -1,14 +1,12 @@
-package shrugitoff.tink.config;
+package stb.shrugitoff.config;
 
-import com.google.common.annotations.GwtIncompatible;
 import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.ConfigManager;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import shrugitoff.tink.ShrugItOff;
+import stb.shrugitoff.ShrugItOff;
 
-import javax.swing.text.DefaultEditorKit;
 import java.util.Arrays;
 import java.util.HashSet;
 
@@ -127,6 +125,39 @@ public class ModConfig {
     @Config.LangKey(ShrugItOff.MODID + ".config.disable_sound")
     @Config.Comment({"If true, sound will never be played"})
     public static boolean disableSound = false;
+
+    @Config.Name("enableNewFormula")
+    @Config.LangKey(ShrugItOff.MODID + ".config.enable_new_formula")
+    @Config.Comment({"If true, enabled the new formula.",
+            "The new formula is based off of the Sigmoid function ",
+            "that asymptotically reaches 1. The new formula is: ",
+            "chance = 2 / (1 + e^(  ((-0.001 * TOUGHNESS_FACTOR) / (0.05 * DAMAGE)) * TOUGHNESS) - 1 )",
+            "To better fine-tune this formula, you can visualize it here §b https://www.desmos.com/calculator/kfp1rl3nws §r",
+            "Use Ddamage and Ktoughness as parameters: DAMAGE is the incoming damage, KToughness is how much each Toughness point matters. ",
+            "This value corresponds to newFormulaKToughness in this config. Decrease this if you use mods that add armors with huge Toughness values",
+            "The graph plots, given a certain DAMAGE, the toughness on the X-axis and the corresponding chance on the Y-axis",
+            "If false, the formula: chance = BASE * TOUGHNESS / DAMAGE will be used"})
+    public static boolean enableNewFormula = true;
+
+    @Config.Name("oldFormulaBaseValue")
+    @Config.LangKey(ShrugItOff.MODID + ".config.old_formula_base")
+    @Config.Comment({"If the old formula is enabled, this is the BASE value"})
+    public static float oldFormulaBase = 0.1f;
+
+    @Config.Name("oldFormulaCapValue")
+    @Config.LangKey(ShrugItOff.MODID + ".config.old_formula_cap")
+    @Config.Comment({"If the old formula is enabled, the maximum value "})
+    @Config.RangeDouble(min = 0.01f, max = 1.0f)
+    public static float oldFormulaCap = 1.0f;
+
+    @Config.Name("newFormulaToughnessFactor")
+    @Config.LangKey(ShrugItOff.MODID + ".config.new_formula_toughness_factor")
+    @Config.Comment({"If the new formula is enabled, this value represents the toughness factor (see enableNewFormula config entry for explanation)"})
+    @Config.RangeDouble(min = 0.01f, max = 100.0f)
+    public static float newFormulaToughnessFactor = 20.0f;
+
+
+
 
     @SubscribeEvent
     public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event)
