@@ -37,6 +37,11 @@ public class ModConfig {
     @Config.Comment({"If true, each time an entity is hit, the damage source type will be printed in the log"})
     public static boolean logDamageSources = false;
 
+    @Config.Name("logChances")
+    @Config.LangKey(ShrugItOff.MODID + ".config.log_chances")
+    @Config.Comment({"If true, the chances (rolled value and value to beat) will be printed in the chat"})
+    public static boolean logChances = false;
+
     @Config.Name("useWhitelist")
     @Config.LangKey(ShrugItOff.MODID + ".config.use_whitelist")
     @Config.Comment({"Controls the damage sources that can be avoided with the Armor Toughness.",
