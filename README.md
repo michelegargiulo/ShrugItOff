@@ -23,3 +23,15 @@ Configuration!
 * Option to blacklist items (if the attacker has equipped those items in the main hand, then the mod will ignore the attack)
 * Option to log hits to chat and log (for debugging and modpack makers)
 * Option to specify a list of small damage sources. Those damage sources will never play the sound.
+
+## Update 0.1.0
+* Removed some unused classes, refactored code
+* Added a new function, based on sigmoid
+* Added a config option to fine tune the new formula
+* Added a config option for the base chance to the old formula
+* Added a config option for the cap value to the old formula
+
+## Update 0.1.1
+* Added config to ignore Absolute and Unblockable attributes
+* Added config to log Logic to chat
+* A little code refactor and polishing
