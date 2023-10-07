@@ -40,11 +40,28 @@ public class ModConfig {
     @Config.Comment({"If true, the chances (rolled value and value to beat) will be printed in the chat"})
     public static boolean logChances = false;
 
+    @Config.Name("logLogic")
+    @Config.LangKey(ShrugItOff.MODID + ".config.log_logic")
+    @Config.Comment({"If true, what happens to every damage is printed in the chat"})
+    public static boolean logLogic = false;
+
     @Config.Name("useWhitelist")
     @Config.LangKey(ShrugItOff.MODID + ".config.use_whitelist")
     @Config.Comment({"Controls the damage sources that can be avoided with the Armor Toughness.",
             "If True, only the damage sources specified in the whitelist can be avoided"})
     public static boolean useWhitelist = false;
+
+    @Config.Name("ignoreUnblockableAttribute")
+    @Config.LangKey(ShrugItOff.MODID + ".config.ignore_unblockable")
+    @Config.Comment({"If true, the 'Unblockable' attribute of Damage Sources will be ignored, and such sources can be shrugged",
+            "A damage source can sometimes have the 'Unblockable' attribute. This types of damage should not be blocked"})
+    public static boolean ignoreUnblockableDamageAttribute = false;
+
+    @Config.Name("ignoreAbsoluteAttribute")
+    @Config.LangKey(ShrugItOff.MODID + ".config.ignore_absolute")
+    @Config.Comment({"If true, the 'Absolute' attribute of Damage Sources will be ignored, and such sources can be shrugged",
+            "A damage source can sometimes have the 'Absolute' attribute. This types of damage should not be modified by armor, enchants, etc"})
+    public static boolean ignoreAbsoluteDamageAttribute = false;
 
     @Config.Name("damageSourceWhitelist")
     @Config.LangKey(ShrugItOff.MODID + ".config.whitelist")
@@ -155,9 +172,6 @@ public class ModConfig {
     @Config.Comment({"If the new formula is enabled, this value represents the toughness factor (see enableNewFormula config entry for explanation)"})
     @Config.RangeDouble(min = 0.01f, max = 100.0f)
     public static float newFormulaToughnessFactor = 20.0f;
-
-
-
 
     @SubscribeEvent
     public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event)

@@ -4,7 +4,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.ai.attributes.AbstractAttributeMap;
 import net.minecraft.entity.ai.attributes.IAttributeInstance;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.*;
 import net.minecraft.util.text.TextComponentString;
@@ -58,45 +57,40 @@ public class LivingAttackEventHandler {
 
                 // If in blacklist, skip
                 if (ModConfig.excludedItems.contains(regName) || ModConfig.excludedItems.contains(regName + ":" + metadata)) {
-                    if (ModConfig.logDamageSources) {
-                        ShrugItOff.logger.debug(String.format("Blacklist contains item %s: ShrugItOff will ignore this attack.", regName + ":" + metadata));
-                    }
+
+                    // Log damage sources
+                    logToChat(ModConfig.logLogic,
+                            String.format("[LOGIC] Damage won't be shrugged: damage dealt with blacklisted item (", regName + ":" + metadata + ")"),
+                            attacker, livingEntity);
                     return;
                 }
             }
         }
 
         // Log damage source
-        if (ModConfig.logDamageSources) {
-            String msg = String.format("Entity %s has been dealt %s amount of %s damage",
-                        event.getEntityLiving().getDisplayName(),
-                        event.getAmount(),
-                        event.getSource().getDamageType()
-                    );
-
-            ShrugItOff.logger.debug(msg);
-
-            if (attacker != null)
-                attacker.sendMessage(new TextComponentString(msg));
-
-            livingEntity.sendMessage(new TextComponentString(msg));
-        }
+        logToChat(ModConfig.logDamageSources, String.format("[DAMAGE SOURCES] Entity %s has been dealt %s amount of %s damage",
+                event.getEntityLiving().getDisplayName(),
+                event.getAmount(),
+                event.getSource().getDamageType()), attacker, livingEntity);
 
         // No damage, no tink.
         if (amount == 0) {
+            logToChat(ModConfig.logLogic, "[LOGIC] Damage not shrugged: damage amount is 0", attacker, livingEntity);
             return;
         }
 
         // If whitelist is active and source not in whitelist OR blacklist is active and source in blacklist
         if ((ModConfig.useWhitelist && !Arrays.asList(ModConfig.damageSourceWhitelist).contains(source.getDamageType())) ||
-                (!ModConfig.useWhitelist && Arrays.asList(ModConfig.damageSourceBlacklist).contains(source.getDamageType())))
+                (!ModConfig.useWhitelist && Arrays.asList(ModConfig.damageSourceBlacklist).contains(source.getDamageType()))) {
             return;
+        }
 
         // Retrieve toughness attribute from entity
         AbstractAttributeMap attrs = livingEntity.getAttributeMap();
         IAttributeInstance toughnessAttr = attrs.getAttributeInstanceByName("generic.armorToughness");
         // If no toughness, return
         if(toughnessAttr == null) {
+            logToChat(ModConfig.logLogic, "[LOGIC] Damage won't be shrugged: Toughness attribute could not be found", attacker, livingEntity);
             return;
         }
 
@@ -106,27 +100,35 @@ public class LivingAttackEventHandler {
         // Roll RNG based on incoming damage and current toughness: toughness 10x damage =100%, toughness 0x =0%
         double blockChance = 0;
         if (ModConfig.enableNewFormula) {
-            blockChance = Math.min(ModConfig.oldFormulaBase * toughness / amount, ModConfig.oldFormulaCap);
-        } else {
             float toughnessFactor = ModConfig.newFormulaToughnessFactor;
             blockChance = (2 / (1 + Math.exp((-0.001 * toughnessFactor * toughness) / (0.05 * amount)))) - 1;
+        } else {
+            blockChance = Math.min(ModConfig.oldFormulaBase * toughness / amount, ModConfig.oldFormulaCap);
         }
-
-        // If damage is unblockable or absolute, or bad RNG, do nothing
         double rng = livingEntity.getRNG().nextDouble();
 
-        if (ModConfig.logChances) {
-            String msg = String.format("Block Chance: %.4f; RNG: %.4f; Damage: %.4f", blockChance, rng, amount);
-            if (attacker != null)
-                attacker.sendMessage(new TextComponentString(msg));
-            livingEntity.sendMessage(new TextComponentString(msg));
+        // Log chances
+        logToChat(ModConfig.logChances, String.format("[CHANCES] Block Chance: %.4f; RNG: %.4f; Damage: %.4f", blockChance, rng, amount), attacker, livingEntity);
+
+        // If the source is unblockable (and config does not allow to ignore),
+        // or the damage is absolute (and config does not allow to ignore), return
+        if ((!ModConfig.ignoreUnblockableDamageAttribute && source.isUnblockable()) ||
+        (!ModConfig.ignoreAbsoluteDamageAttribute && source.isDamageAbsolute())) {
+            logToChat(ModConfig.logLogic, "[LOGIC] Damage won't be shrugged: The damage is either Unblockable or Absolute", attacker, livingEntity);
+            return;
         }
 
-        // If the source is unblockable, or the damage is absolute, or back luck, everything goes as normal
-        if (source.isUnblockable() || source.isDamageAbsolute() || rng > blockChance) return;
+        // If back luck, everything goes as normal
+        if (rng > blockChance) {
+            logToChat(ModConfig.logLogic, "[LOGIC] Damage won't be shrugged: bad luck", attacker, livingEntity);
+            return;
+        }
 
         // Damage blocked! Set event as canceled
-        if (event.isCancelable()) event.setCanceled(true);
+        if (event.isCancelable()) {
+            event.setCanceled(true);
+            logToChat(ModConfig.logLogic, "[LOGIC] Damage has been shrugged off", attacker, livingEntity);
+        }
 
         // If damageSource is smallDamageSource or sound is disabled, do not play sound
         if (ModConfig.disableSound || Arrays.asList(ModConfig.smallDamageSources).contains(source.getDamageType())) return;
@@ -140,5 +142,11 @@ public class LivingAttackEventHandler {
         float pitch = Math.max(Math.min(5.0F/amount, 2.0F),0.5F);
         world.playSound(null, x, y, z, soundEvent, SoundCategory.BLOCKS, volume, pitch);
 
+    }
+
+    private static void logToChat(boolean shoudLog, String msg, Entity attacker, EntityLivingBase entity) {
+        if (!shoudLog) return;
+        if (attacker instanceof EntityLivingBase) attacker.sendMessage(new TextComponentString(msg));
+        entity.sendMessage(new TextComponentString(msg));
     }
 }
