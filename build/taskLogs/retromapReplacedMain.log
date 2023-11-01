@@ -1,31 +1,24 @@
-Processing 5 files
+Processing 6 files
 Start Processing: shrugitoff/tink/LivingAttackEventHandler.java
 New Key: class net/minecraftforge/fml/common/Mod
-Rename field net/minecraft/entity/Entity/world[1032,1037]::world->field_70170_p
-Rename field net/minecraft/world/World/isRemote[1066,1074]::isRemote->field_72995_K
-Rename method net/minecraft/command/ICommandSender/getPosition ()Lnet/minecraft/util/math/BlockPos;[1117,1128]::getPosition->func_180425_c
-Rename method net/minecraft/util/math/Vec3i/getX ()I[1133,1137]::getX->func_177958_n
-Rename method net/minecraft/command/ICommandSender/getPosition ()Lnet/minecraft/util/math/BlockPos;[1184,1195]::getPosition->func_180425_c
-Rename method net/minecraft/util/math/Vec3i/getY ()I[1200,1204]::getY->func_177956_o
-Rename method net/minecraft/command/ICommandSender/getPosition ()Lnet/minecraft/util/math/BlockPos;[1251,1262]::getPosition->func_180425_c
-Rename method net/minecraft/util/math/Vec3i/getZ ()I[1267,1271]::getZ->func_177952_p
-Rename method net/minecraft/entity/EntityLivingBase/getAttributeMap ()Lnet/minecraft/entity/ai/attributes/AbstractAttributeMap;[1615,1630]::getAttributeMap->func_110140_aT
-Rename method net/minecraft/entity/ai/attributes/AbstractAttributeMap/getAttributeInstanceByName (Ljava/lang/String;)Lnet/minecraft/entity/ai/attributes/IAttributeInstance;[1687,1713]::getAttributeInstanceByName->func_111152_a
-Rename method net/minecraft/entity/ai/attributes/IAttributeInstance/getAttributeValue ()D[1916,1933]::getAttributeValue->func_111126_e
-Rename method net/minecraft/util/DamageSource/isUnblockable ()Z[2181,2194]::isUnblockable->func_76363_c
-Rename method net/minecraft/util/DamageSource/isDamageAbsolute ()Z[2207,2223]::isDamageAbsolute->func_151517_h
-Rename method net/minecraft/entity/EntityLivingBase/getRNG ()Ljava/util/Random;[2239,2245]::getRNG->func_70681_au
-Rename method net/minecraft/util/DamageSource/getDamageType ()Ljava/lang/String;[2312,2325]::getDamageType->func_76355_l
-Rename method net/minecraft/util/DamageSource/getDamageType ()Ljava/lang/String;[2354,2367]::getDamageType->func_76355_l
-Rename method net/minecraft/util/DamageSource/getDamageType ()Ljava/lang/String;[2396,2409]::getDamageType->func_76355_l
-Rename method net/minecraft/util/DamageSource/getDamageType ()Ljava/lang/String;[2437,2450]::getDamageType->func_76355_l
-Rename method net/minecraft/util/DamageSource/getDamageType ()Ljava/lang/String;[2681,2694]::getDamageType->func_76355_l
-Rename method net/minecraft/util/DamageSource/getDamageType ()Ljava/lang/String;[2720,2733]::getDamageType->func_76355_l
-Rename method net/minecraft/util/DamageSource/getDamageType ()Ljava/lang/String;[2762,2775]::getDamageType->func_76355_l
-Rename method net/minecraft/util/DamageSource/getDamageType ()Ljava/lang/String;[2803,2816]::getDamageType->func_76355_l
-Rename method net/minecraft/util/DamageSource/getDamageType ()Ljava/lang/String;[2871,2884]::getDamageType->func_76355_l
-Rename method net/minecraft/util/DamageSource/getDamageType ()Ljava/lang/String;[2916,2929]::getDamageType->func_76355_l
-Rename method net/minecraft/world/World/playSound (Lnet/minecraft/entity/player/EntityPlayer;DDDLnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FF)V[3341,3350]::playSound->func_184148_a
+Rename method net/minecraft/entity/Entity/getEntityId ()I[1123,1134]::getEntityId->func_145782_y
+Rename field net/minecraft/entity/Entity/world[1543,1548]::world->field_70170_p
+Rename field net/minecraft/world/World/isRemote[1577,1585]::isRemote->field_72995_K
+Rename method net/minecraft/entity/EntityLivingBase/getAttributeMap ()Lnet/minecraft/entity/ai/attributes/AbstractAttributeMap;[1925,1940]::getAttributeMap->func_110140_aT
+Rename method net/minecraft/entity/ai/attributes/AbstractAttributeMap/getAttributeInstanceByName (Ljava/lang/String;)Lnet/minecraft/entity/ai/attributes/IAttributeInstance;[1997,2023]::getAttributeInstanceByName->func_111152_a
+Rename method net/minecraft/entity/ai/attributes/IAttributeInstance/getAttributeValue ()D[2165,2182]::getAttributeValue->func_111126_e
+Rename method net/minecraft/util/DamageSource/isUnblockable ()Z[2804,2817]::isUnblockable->func_76363_c
+Rename method net/minecraft/util/DamageSource/isDamageAbsolute ()Z[2830,2846]::isDamageAbsolute->func_151517_h
+Rename method net/minecraft/entity/EntityLivingBase/getRNG ()Ljava/util/Random;[2862,2868]::getRNG->func_70681_au
+Rename method net/minecraft/util/DamageSource/getDamageType ()Ljava/lang/String;[2999,3012]::getDamageType->func_76355_l
+Rename method net/minecraft/util/DamageSource/getDamageType ()Ljava/lang/String;[3279,3292]::getDamageType->func_76355_l
+Rename method net/minecraft/command/ICommandSender/getPosition ()Lnet/minecraft/util/math/BlockPos;[3386,3397]::getPosition->func_180425_c
+Rename method net/minecraft/util/math/Vec3i/getX ()I[3402,3406]::getX->func_177958_n
+Rename method net/minecraft/command/ICommandSender/getPosition ()Lnet/minecraft/util/math/BlockPos;[3461,3472]::getPosition->func_180425_c
+Rename method net/minecraft/util/math/Vec3i/getY ()I[3477,3481]::getY->func_177956_o
+Rename method net/minecraft/command/ICommandSender/getPosition ()Lnet/minecraft/util/math/BlockPos;[3536,3547]::getPosition->func_180425_c
+Rename method net/minecraft/util/math/Vec3i/getZ ()I[3552,3556]::getZ->func_177952_p
+Rename method net/minecraft/world/World/playSound (Lnet/minecraft/entity/player/EntityPlayer;DDDLnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FF)V[3919,3928]::playSound->func_184148_a
 Import: net.minecraft.entity.EntityLivingBase
 Import: net.minecraft.entity.ai.attributes.AbstractAttributeMap
 Import: net.minecraft.entity.ai.attributes.IAttributeInstance
@@ -37,7 +30,19 @@ Import: net.minecraftforge.event.entity.living.LivingAttackEvent
 Import: net.minecraftforge.fml.common.Mod
 Import: net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 Import: net.minecraft.world.World
+Import: java.util.Arrays
 End  Processing: shrugitoff/tink/LivingAttackEventHandler.java
+
+Start Processing: shrugitoff/tink/ShrugConfig.java
+New Key: class net/minecraftforge/common/config/Config
+New Key: class net/minecraftforge/common/config/Config
+New Key: class net/minecraftforge/common/config/Config
+New Key: class net/minecraftforge/common/config/Config
+New Key: class net/minecraftforge/common/config/Config
+New Key: class net/minecraftforge/common/config/Config
+New Key: class net/minecraftforge/common/config/Config
+Import: net.minecraftforge.common.config.Config
+End  Processing: shrugitoff/tink/ShrugConfig.java
 
 Start Processing: shrugitoff/tink/TinkMain.java
 New Key: class net/minecraftforge/fml/common/Mod

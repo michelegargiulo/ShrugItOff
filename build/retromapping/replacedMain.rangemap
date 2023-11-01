@@ -1,88 +1,131 @@
 Unsupposrted library path: C:\Users\Eliezer Miron\Desktop\MinecraftModding\ShrugItOff\Shrug\build\classes\api
 Unsupposrted library path: C:\Users\Eliezer Miron\Desktop\MinecraftModding\ShrugItOff\Shrug\build\resources\api
 Symbol range map extraction starting
-Processing 5 files
-startProcessing "shrugitoff/tink/LivingAttackEventHandler.java" md5: eedec387aa882b3984ccb1a09be65f16
+Processing 6 files
+startProcessing "shrugitoff/tink/LivingAttackEventHandler.java" md5: f29238e97469c1d93f94884d965efd75
 @|shrugitoff/tink/LivingAttackEventHandler.java|8|23|shrugitoff.tink|package|shrugitoff.tink|(file)
 Class Start: shrugitoff.tink.LivingAttackEventHandler
-   @|shrugitoff/tink/LivingAttackEventHandler.java|586|608|Mod.EventBusSubscriber|class|net.minecraftforge.fml.common.Mod.EventBusSubscriber|false
-   @|shrugitoff/tink/LivingAttackEventHandler.java|623|647|LivingAttackEventHandler|class|shrugitoff.tink.LivingAttackEventHandler|false
-   @|shrugitoff/tink/LivingAttackEventHandler.java|760|776|ResourceLocation|class|net.minecraft.util.ResourceLocation|false
-   @|shrugitoff/tink/LivingAttackEventHandler.java|760|776|ResourceLocation|class|net.minecraft.util.ResourceLocation|false
-   @|shrugitoff/tink/LivingAttackEventHandler.java|777|790|soundResource|field|shrugitoff.tink.LivingAttackEventHandler|soundResource|
-   @|shrugitoff/tink/LivingAttackEventHandler.java|797|813|ResourceLocation|class|net.minecraft.util.ResourceLocation|false
+   @|shrugitoff/tink/LivingAttackEventHandler.java|614|636|Mod.EventBusSubscriber|class|net.minecraftforge.fml.common.Mod.EventBusSubscriber|false
+   @|shrugitoff/tink/LivingAttackEventHandler.java|651|675|LivingAttackEventHandler|class|shrugitoff.tink.LivingAttackEventHandler|false
+   @|shrugitoff/tink/LivingAttackEventHandler.java|788|804|ResourceLocation|class|net.minecraft.util.ResourceLocation|false
+   @|shrugitoff/tink/LivingAttackEventHandler.java|788|804|ResourceLocation|class|net.minecraft.util.ResourceLocation|false
+   @|shrugitoff/tink/LivingAttackEventHandler.java|805|818|soundResource|field|shrugitoff.tink.LivingAttackEventHandler|soundResource|
+   @|shrugitoff/tink/LivingAttackEventHandler.java|825|841|ResourceLocation|class|net.minecraft.util.ResourceLocation|false
    Method Start: onLivingAttackEvent(Lnet/minecraftforge/event/entity/living/LivingAttackEvent;)V
-      @|shrugitoff/tink/LivingAttackEventHandler.java|921|926|event|param|shrugitoff.tink.LivingAttackEventHandler|onLivingAttackEvent|(Lnet/minecraftforge/event/entity/living/LivingAttackEvent;)V|event|0
-      @|shrugitoff/tink/LivingAttackEventHandler.java|843|857|SubscribeEvent|class|net.minecraftforge.fml.common.eventhandler.SubscribeEvent|false
-      @|shrugitoff/tink/LivingAttackEventHandler.java|882|901|onLivingAttackEvent|method|shrugitoff.tink.LivingAttackEventHandler|onLivingAttackEvent|(Lnet/minecraftforge/event/entity/living/LivingAttackEvent;)V
-      @|shrugitoff/tink/LivingAttackEventHandler.java|903|920|LivingAttackEvent|class|net.minecraftforge.event.entity.living.LivingAttackEvent|false
-      @|shrugitoff/tink/LivingAttackEventHandler.java|939|955|EntityLivingBase|class|net.minecraft.entity.EntityLivingBase|false
-      @|shrugitoff/tink/LivingAttackEventHandler.java|971|976|event|param|shrugitoff.tink.LivingAttackEventHandler|onLivingAttackEvent|(Lnet/minecraftforge/event/entity/living/LivingAttackEvent;)V|event|0
-      @|shrugitoff/tink/LivingAttackEventHandler.java|977|992|getEntityLiving|method|net.minecraftforge.event.entity.living.LivingEvent|getEntityLiving|()Lnet/minecraft/entity/EntityLivingBase;
-      @|shrugitoff/tink/LivingAttackEventHandler.java|1005|1010|World|class|net.minecraft.world.World|false
-      @|shrugitoff/tink/LivingAttackEventHandler.java|1032|1037|world|field|net.minecraft.entity.Entity|world
-      @|shrugitoff/tink/LivingAttackEventHandler.java|1058|1066|isRemote|field|net.minecraft.world.World|isRemote
-      @|shrugitoff/tink/LivingAttackEventHandler.java|1104|1115|getPosition|method|net.minecraft.command.ICommandSender|getPosition|()Lnet/minecraft/util/math/BlockPos;
-      @|shrugitoff/tink/LivingAttackEventHandler.java|1118|1122|getX|method|net.minecraft.util.math.Vec3i|getX|()I
-      @|shrugitoff/tink/LivingAttackEventHandler.java|1160|1171|getPosition|method|net.minecraft.command.ICommandSender|getPosition|()Lnet/minecraft/util/math/BlockPos;
-      @|shrugitoff/tink/LivingAttackEventHandler.java|1174|1178|getY|method|net.minecraft.util.math.Vec3i|getY|()I
-      @|shrugitoff/tink/LivingAttackEventHandler.java|1216|1227|getPosition|method|net.minecraft.command.ICommandSender|getPosition|()Lnet/minecraft/util/math/BlockPos;
-      @|shrugitoff/tink/LivingAttackEventHandler.java|1230|1234|getZ|method|net.minecraft.util.math.Vec3i|getZ|()I
-      @|shrugitoff/tink/LivingAttackEventHandler.java|1361|1373|DamageSource|class|net.minecraft.util.DamageSource|false
-      @|shrugitoff/tink/LivingAttackEventHandler.java|1383|1388|event|param|shrugitoff.tink.LivingAttackEventHandler|onLivingAttackEvent|(Lnet/minecraftforge/event/entity/living/LivingAttackEvent;)V|event|0
-      @|shrugitoff/tink/LivingAttackEventHandler.java|1389|1398|getSource|method|net.minecraftforge.event.entity.living.LivingAttackEvent|getSource|()Lnet/minecraft/util/DamageSource;
-      @|shrugitoff/tink/LivingAttackEventHandler.java|1430|1435|event|param|shrugitoff.tink.LivingAttackEventHandler|onLivingAttackEvent|(Lnet/minecraftforge/event/entity/living/LivingAttackEvent;)V|event|0
-      @|shrugitoff/tink/LivingAttackEventHandler.java|1436|1445|getAmount|method|net.minecraftforge.event.entity.living.LivingAttackEvent|getAmount|()F
-      @|shrugitoff/tink/LivingAttackEventHandler.java|1527|1547|AbstractAttributeMap|class|net.minecraft.entity.ai.attributes.AbstractAttributeMap|false
-      @|shrugitoff/tink/LivingAttackEventHandler.java|1569|1584|getAttributeMap|method|net.minecraft.entity.EntityLivingBase|getAttributeMap|()Lnet/minecraft/entity/ai/attributes/AbstractAttributeMap;
-      @|shrugitoff/tink/LivingAttackEventHandler.java|1601|1619|IAttributeInstance|class|net.minecraft.entity.ai.attributes.IAttributeInstance|false
-      @|shrugitoff/tink/LivingAttackEventHandler.java|1642|1668|getAttributeInstanceByName|method|net.minecraft.entity.ai.attributes.AbstractAttributeMap|getAttributeInstanceByName|(Ljava/lang/String;)Lnet/minecraft/entity/ai/attributes/IAttributeInstance;
-      @|shrugitoff/tink/LivingAttackEventHandler.java|1884|1901|getAttributeValue|method|net.minecraft.entity.ai.attributes.IAttributeInstance|getAttributeValue|()D
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2153|2166|isUnblockable|method|net.minecraft.util.DamageSource|isUnblockable|()Z
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2180|2196|isDamageAbsolute|method|net.minecraft.util.DamageSource|isDamageAbsolute|()Z
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2215|2221|getRNG|method|net.minecraft.entity.EntityLivingBase|getRNG|()Ljava/util/Random;
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2224|2234|nextDouble|method|java.util.Random|nextDouble|()D
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2281|2294|getDamageType|method|net.minecraft.util.DamageSource|getDamageType|()Ljava/lang/String;
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2297|2303|equals|method|java.lang.String|equals|(Ljava/lang/Object;)Z
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2324|2337|getDamageType|method|net.minecraft.util.DamageSource|getDamageType|()Ljava/lang/String;
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2340|2346|equals|method|java.lang.String|equals|(Ljava/lang/Object;)Z
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2367|2380|getDamageType|method|net.minecraft.util.DamageSource|getDamageType|()Ljava/lang/String;
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2383|2389|equals|method|java.lang.String|equals|(Ljava/lang/Object;)Z
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2409|2422|getDamageType|method|net.minecraft.util.DamageSource|getDamageType|()Ljava/lang/String;
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2425|2431|equals|method|java.lang.String|equals|(Ljava/lang/Object;)Z
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2577|2582|event|param|shrugitoff.tink.LivingAttackEventHandler|onLivingAttackEvent|(Lnet/minecraftforge/event/entity/living/LivingAttackEvent;)V|event|0
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2583|2594|setCanceled|method|net.minecraftforge.fml.common.eventhandler.Event|setCanceled|(Z)V
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2654|2667|getDamageType|method|net.minecraft.util.DamageSource|getDamageType|()Ljava/lang/String;
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2670|2676|equals|method|java.lang.String|equals|(Ljava/lang/Object;)Z
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2694|2707|getDamageType|method|net.minecraft.util.DamageSource|getDamageType|()Ljava/lang/String;
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2710|2716|equals|method|java.lang.String|equals|(Ljava/lang/Object;)Z
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2737|2750|getDamageType|method|net.minecraft.util.DamageSource|getDamageType|()Ljava/lang/String;
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2753|2759|equals|method|java.lang.String|equals|(Ljava/lang/Object;)Z
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2779|2792|getDamageType|method|net.minecraft.util.DamageSource|getDamageType|()Ljava/lang/String;
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2795|2801|equals|method|java.lang.String|equals|(Ljava/lang/Object;)Z
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2848|2861|getDamageType|method|net.minecraft.util.DamageSource|getDamageType|()Ljava/lang/String;
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2864|2870|equals|method|java.lang.String|equals|(Ljava/lang/Object;)Z
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2894|2907|getDamageType|method|net.minecraft.util.DamageSource|getDamageType|()Ljava/lang/String;
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2910|2916|equals|method|java.lang.String|equals|(Ljava/lang/Object;)Z
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2961|2966|event|param|shrugitoff.tink.LivingAttackEventHandler|onLivingAttackEvent|(Lnet/minecraftforge/event/entity/living/LivingAttackEvent;)V|event|0
-      @|shrugitoff/tink/LivingAttackEventHandler.java|2967|2978|setCanceled|method|net.minecraftforge.fml.common.eventhandler.Event|setCanceled|(Z)V
-      @|shrugitoff/tink/LivingAttackEventHandler.java|3094|3104|SoundEvent|class|net.minecraft.util.SoundEvent|false
-      @|shrugitoff/tink/LivingAttackEventHandler.java|3122|3132|SoundEvent|class|net.minecraft.util.SoundEvent|false
-      @|shrugitoff/tink/LivingAttackEventHandler.java|3133|3146|soundResource|field|shrugitoff.tink.LivingAttackEventHandler|soundResource
-      @|shrugitoff/tink/LivingAttackEventHandler.java|3185|3189|Math|class|java.lang.Math|false
-      @|shrugitoff/tink/LivingAttackEventHandler.java|3190|3193|min|method|java.lang.Math|min|(FF)F
-      @|shrugitoff/tink/LivingAttackEventHandler.java|3249|3253|Math|class|java.lang.Math|false
-      @|shrugitoff/tink/LivingAttackEventHandler.java|3254|3257|max|method|java.lang.Math|max|(FF)F
-      @|shrugitoff/tink/LivingAttackEventHandler.java|3258|3262|Math|class|java.lang.Math|false
-      @|shrugitoff/tink/LivingAttackEventHandler.java|3263|3266|min|method|java.lang.Math|min|(FF)F
-      @|shrugitoff/tink/LivingAttackEventHandler.java|3320|3329|playSound|method|net.minecraft.world.World|playSound|(Lnet/minecraft/entity/player/EntityPlayer;DDDLnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FF)V
-      @|shrugitoff/tink/LivingAttackEventHandler.java|3357|3370|SoundCategory|class|net.minecraft.util.SoundCategory|false
-      @|shrugitoff/tink/LivingAttackEventHandler.java|3371|3377|BLOCKS|field|net.minecraft.util.SoundCategory|BLOCKS
+      @|shrugitoff/tink/LivingAttackEventHandler.java|949|954|event|param|shrugitoff.tink.LivingAttackEventHandler|onLivingAttackEvent|(Lnet/minecraftforge/event/entity/living/LivingAttackEvent;)V|event|0
+      @|shrugitoff/tink/LivingAttackEventHandler.java|871|885|SubscribeEvent|class|net.minecraftforge.fml.common.eventhandler.SubscribeEvent|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|910|929|onLivingAttackEvent|method|shrugitoff.tink.LivingAttackEventHandler|onLivingAttackEvent|(Lnet/minecraftforge/event/entity/living/LivingAttackEvent;)V
+      @|shrugitoff/tink/LivingAttackEventHandler.java|931|948|LivingAttackEvent|class|net.minecraftforge.event.entity.living.LivingAttackEvent|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|967|983|EntityLivingBase|class|net.minecraft.entity.EntityLivingBase|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|999|1004|event|param|shrugitoff.tink.LivingAttackEventHandler|onLivingAttackEvent|(Lnet/minecraftforge/event/entity/living/LivingAttackEvent;)V|event|0
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1005|1020|getEntityLiving|method|net.minecraftforge.event.entity.living.LivingEvent|getEntityLiving|()Lnet/minecraft/entity/EntityLivingBase;
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1058|1064|Arrays|class|java.util.Arrays|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1065|1071|asList|method|java.util.Arrays|asList|([Ljava/lang/Object;)Ljava/util/List;
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1072|1083|ShrugConfig|class|shrugitoff.tink.ShrugConfig|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1084|1099|entityBlacklist|field|shrugitoff.tink.ShrugConfig|entityBlacklist
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1101|1109|contains|method|java.util.Collection|contains|(Ljava/lang/Object;)Z
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1123|1134|getEntityId|method|net.minecraft.entity.Entity|getEntityId|()I
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1151|1162|ShrugConfig|class|shrugitoff.tink.ShrugConfig|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1163|1172|blacklist|field|shrugitoff.tink.ShrugConfig|blacklist
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1332|1343|ShrugConfig|class|shrugitoff.tink.ShrugConfig|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1344|1353|blacklist|field|shrugitoff.tink.ShrugConfig|blacklist
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1514|1519|World|class|net.minecraft.world.World|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1541|1546|world|field|net.minecraft.entity.Entity|world
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1567|1575|isRemote|field|net.minecraft.world.World|isRemote
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1702|1714|DamageSource|class|net.minecraft.util.DamageSource|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1724|1729|event|param|shrugitoff.tink.LivingAttackEventHandler|onLivingAttackEvent|(Lnet/minecraftforge/event/entity/living/LivingAttackEvent;)V|event|0
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1730|1739|getSource|method|net.minecraftforge.event.entity.living.LivingAttackEvent|getSource|()Lnet/minecraft/util/DamageSource;
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1771|1776|event|param|shrugitoff.tink.LivingAttackEventHandler|onLivingAttackEvent|(Lnet/minecraftforge/event/entity/living/LivingAttackEvent;)V|event|0
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1777|1786|getAmount|method|net.minecraftforge.event.entity.living.LivingAttackEvent|getAmount|()F
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1868|1888|AbstractAttributeMap|class|net.minecraft.entity.ai.attributes.AbstractAttributeMap|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1910|1925|getAttributeMap|method|net.minecraft.entity.EntityLivingBase|getAttributeMap|()Lnet/minecraft/entity/ai/attributes/AbstractAttributeMap;
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1942|1960|IAttributeInstance|class|net.minecraft.entity.ai.attributes.IAttributeInstance|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|1983|2009|getAttributeInstanceByName|method|net.minecraft.entity.ai.attributes.AbstractAttributeMap|getAttributeInstanceByName|(Ljava/lang/String;)Lnet/minecraft/entity/ai/attributes/IAttributeInstance;
+      @|shrugitoff/tink/LivingAttackEventHandler.java|2164|2181|getAttributeValue|method|net.minecraft.entity.ai.attributes.IAttributeInstance|getAttributeValue|()D
+      @|shrugitoff/tink/LivingAttackEventHandler.java|2356|2367|ShrugConfig|class|shrugitoff.tink.ShrugConfig|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|2368|2384|useSimpleFormula|field|shrugitoff.tink.ShrugConfig|useSimpleFormula
+      @|shrugitoff/tink/LivingAttackEventHandler.java|2420|2431|ShrugConfig|class|shrugitoff.tink.ShrugConfig|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|2432|2442|multiplier|field|shrugitoff.tink.ShrugConfig|multiplier
+      @|shrugitoff/tink/LivingAttackEventHandler.java|2522|2533|ShrugConfig|class|shrugitoff.tink.ShrugConfig|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|2534|2544|multiplier|field|shrugitoff.tink.ShrugConfig|multiplier
+      @|shrugitoff/tink/LivingAttackEventHandler.java|2664|2675|ShrugConfig|class|shrugitoff.tink.ShrugConfig|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|2676|2689|maxTinkChance|field|shrugitoff.tink.ShrugConfig|maxTinkChance
+      @|shrugitoff/tink/LivingAttackEventHandler.java|2707|2718|ShrugConfig|class|shrugitoff.tink.ShrugConfig|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|2719|2732|maxTinkChance|field|shrugitoff.tink.ShrugConfig|maxTinkChance
+      @|shrugitoff/tink/LivingAttackEventHandler.java|2807|2820|isUnblockable|method|net.minecraft.util.DamageSource|isUnblockable|()Z
+      @|shrugitoff/tink/LivingAttackEventHandler.java|2834|2850|isDamageAbsolute|method|net.minecraft.util.DamageSource|isDamageAbsolute|()Z
+      @|shrugitoff/tink/LivingAttackEventHandler.java|2869|2875|getRNG|method|net.minecraft.entity.EntityLivingBase|getRNG|()Ljava/util/Random;
+      @|shrugitoff/tink/LivingAttackEventHandler.java|2878|2888|nextDouble|method|java.util.Random|nextDouble|()D
+      @|shrugitoff/tink/LivingAttackEventHandler.java|2928|2934|Arrays|class|java.util.Arrays|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|2935|2941|asList|method|java.util.Arrays|asList|([Ljava/lang/Object;)Ljava/util/List;
+      @|shrugitoff/tink/LivingAttackEventHandler.java|2942|2953|ShrugConfig|class|shrugitoff.tink.ShrugConfig|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|2954|2981|silentShruggableDamageTypes|field|shrugitoff.tink.ShrugConfig|silentShruggableDamageTypes
+      @|shrugitoff/tink/LivingAttackEventHandler.java|2983|2991|contains|method|java.util.Collection|contains|(Ljava/lang/Object;)Z
+      @|shrugitoff/tink/LivingAttackEventHandler.java|2999|3012|getDamageType|method|net.minecraft.util.DamageSource|getDamageType|()Ljava/lang/String;
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3145|3150|event|param|shrugitoff.tink.LivingAttackEventHandler|onLivingAttackEvent|(Lnet/minecraftforge/event/entity/living/LivingAttackEvent;)V|event|0
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3151|3162|setCanceled|method|net.minecraftforge.fml.common.eventhandler.Event|setCanceled|(Z)V
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3215|3221|Arrays|class|java.util.Arrays|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3222|3228|asList|method|java.util.Arrays|asList|([Ljava/lang/Object;)Ljava/util/List;
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3229|3240|ShrugConfig|class|shrugitoff.tink.ShrugConfig|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3241|3262|shruggableDamageTypes|field|shrugitoff.tink.ShrugConfig|shruggableDamageTypes
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3264|3272|contains|method|java.util.Collection|contains|(Ljava/lang/Object;)Z
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3280|3293|getDamageType|method|net.minecraft.util.DamageSource|getDamageType|()Ljava/lang/String;
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3321|3326|event|param|shrugitoff.tink.LivingAttackEventHandler|onLivingAttackEvent|(Lnet/minecraftforge/event/entity/living/LivingAttackEvent;)V|event|0
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3327|3338|setCanceled|method|net.minecraftforge.fml.common.eventhandler.Event|setCanceled|(Z)V
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3388|3399|getPosition|method|net.minecraft.command.ICommandSender|getPosition|()Lnet/minecraft/util/math/BlockPos;
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3402|3406|getX|method|net.minecraft.util.math.Vec3i|getX|()I
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3452|3463|getPosition|method|net.minecraft.command.ICommandSender|getPosition|()Lnet/minecraft/util/math/BlockPos;
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3466|3470|getY|method|net.minecraft.util.math.Vec3i|getY|()I
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3516|3527|getPosition|method|net.minecraft.command.ICommandSender|getPosition|()Lnet/minecraft/util/math/BlockPos;
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3530|3534|getZ|method|net.minecraft.util.math.Vec3i|getZ|()I
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3662|3672|SoundEvent|class|net.minecraft.util.SoundEvent|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3690|3700|SoundEvent|class|net.minecraft.util.SoundEvent|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3701|3714|soundResource|field|shrugitoff.tink.LivingAttackEventHandler|soundResource
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3753|3757|Math|class|java.lang.Math|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3758|3761|min|method|java.lang.Math|min|(FF)F
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3817|3821|Math|class|java.lang.Math|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3822|3825|max|method|java.lang.Math|max|(FF)F
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3826|3830|Math|class|java.lang.Math|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3831|3834|min|method|java.lang.Math|min|(FF)F
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3888|3897|playSound|method|net.minecraft.world.World|playSound|(Lnet/minecraft/entity/player/EntityPlayer;DDDLnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FF)V
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3925|3938|SoundCategory|class|net.minecraft.util.SoundCategory|false
+      @|shrugitoff/tink/LivingAttackEventHandler.java|3939|3945|BLOCKS|field|net.minecraft.util.SoundCategory|BLOCKS
    Method End: onLivingAttackEvent(Lnet/minecraftforge/event/entity/living/LivingAttackEvent;)V
 Class End  : shrugitoff.tink.LivingAttackEventHandler
 endProcessing "shrugitoff/tink/LivingAttackEventHandler.java"
 
-startProcessing "shrugitoff/tink/TinkMain.java" md5: 5c563ae29ba9f79cd00eefe5517d0b40
+startProcessing "shrugitoff/tink/ShrugConfig.java" md5: afc85d35388f4db916833e8e3b5e82db
+@|shrugitoff/tink/ShrugConfig.java|8|23|shrugitoff.tink|package|shrugitoff.tink|(file)
+Class Start: shrugitoff.tink.ShrugConfig
+   @|shrugitoff/tink/ShrugConfig.java|80|86|Config|class|net.minecraftforge.common.config.Config|false
+   @|shrugitoff/tink/ShrugConfig.java|87|92|modid|method|net.minecraftforge.common.config.Config|modid|()Ljava/lang/String;
+   @|shrugitoff/tink/ShrugConfig.java|95|103|TinkMain|class|shrugitoff.tink.TinkMain|false
+   @|shrugitoff/tink/ShrugConfig.java|104|109|MODID|field|shrugitoff.tink.TinkMain|MODID
+   @|shrugitoff/tink/ShrugConfig.java|125|136|ShrugConfig|class|shrugitoff.tink.ShrugConfig|false
+   @|shrugitoff/tink/ShrugConfig.java|147|161|Config.Comment|class|net.minecraftforge.common.config.Config.Comment|false
+   @|shrugitoff/tink/ShrugConfig.java|331|341|multiplier|field|shrugitoff.tink.ShrugConfig|multiplier|
+   @|shrugitoff/tink/ShrugConfig.java|357|371|Config.Comment|class|net.minecraftforge.common.config.Config.Comment|false
+   @|shrugitoff/tink/ShrugConfig.java|626|642|useSimpleFormula|field|shrugitoff.tink.ShrugConfig|useSimpleFormula|
+   @|shrugitoff/tink/ShrugConfig.java|660|674|Config.Comment|class|net.minecraftforge.common.config.Config.Comment|false
+   @|shrugitoff/tink/ShrugConfig.java|824|837|maxTinkChance|field|shrugitoff.tink.ShrugConfig|maxTinkChance|
+   @|shrugitoff/tink/ShrugConfig.java|1053|1059|String|class|java.lang.String|false
+   @|shrugitoff/tink/ShrugConfig.java|853|867|Config.Comment|class|net.minecraftforge.common.config.Config.Comment|false
+   @|shrugitoff/tink/ShrugConfig.java|1053|1059|String|class|java.lang.String|false
+   @|shrugitoff/tink/ShrugConfig.java|1062|1083|shruggableDamageTypes|field|shrugitoff.tink.ShrugConfig|shruggableDamageTypes|
+   @|shrugitoff/tink/ShrugConfig.java|1463|1469|String|class|java.lang.String|false
+   @|shrugitoff/tink/ShrugConfig.java|1251|1265|Config.Comment|class|net.minecraftforge.common.config.Config.Comment|false
+   @|shrugitoff/tink/ShrugConfig.java|1463|1469|String|class|java.lang.String|false
+   @|shrugitoff/tink/ShrugConfig.java|1472|1499|silentShruggableDamageTypes|field|shrugitoff.tink.ShrugConfig|silentShruggableDamageTypes|
+   @|shrugitoff/tink/ShrugConfig.java|1896|1902|String|class|java.lang.String|false
+   @|shrugitoff/tink/ShrugConfig.java|1616|1630|Config.Comment|class|net.minecraftforge.common.config.Config.Comment|false
+   @|shrugitoff/tink/ShrugConfig.java|1896|1902|String|class|java.lang.String|false
+   @|shrugitoff/tink/ShrugConfig.java|1905|1920|entityBlacklist|field|shrugitoff.tink.ShrugConfig|entityBlacklist|
+   @|shrugitoff/tink/ShrugConfig.java|1935|1949|Config.Comment|class|net.minecraftforge.common.config.Config.Comment|false
+   @|shrugitoff/tink/ShrugConfig.java|2072|2081|blacklist|field|shrugitoff.tink.ShrugConfig|blacklist|
+Class End  : shrugitoff.tink.ShrugConfig
+endProcessing "shrugitoff/tink/ShrugConfig.java"
+
+startProcessing "shrugitoff/tink/TinkMain.java" md5: fb969ae7a93474df575dd1bfb7edc397
 @|shrugitoff/tink/TinkMain.java|8|23|shrugitoff.tink|package|shrugitoff.tink|(file)
 Class Start: shrugitoff.tink.TinkMain
    @|shrugitoff/tink/TinkMain.java|421|424|Mod|class|net.minecraftforge.fml.common.Mod|false
@@ -101,54 +144,54 @@ Class Start: shrugitoff.tink.TinkMain
    @|shrugitoff/tink/TinkMain.java|630|636|String|class|java.lang.String|false
    @|shrugitoff/tink/TinkMain.java|630|636|String|class|java.lang.String|false
    @|shrugitoff/tink/TinkMain.java|637|642|MODID|field|shrugitoff.tink.TinkMain|MODID|
-   @|shrugitoff/tink/TinkMain.java|680|686|String|class|java.lang.String|false
-   @|shrugitoff/tink/TinkMain.java|680|686|String|class|java.lang.String|false
-   @|shrugitoff/tink/TinkMain.java|687|694|MODNAME|field|shrugitoff.tink.TinkMain|MODNAME|
-   @|shrugitoff/tink/TinkMain.java|739|745|String|class|java.lang.String|false
-   @|shrugitoff/tink/TinkMain.java|739|745|String|class|java.lang.String|false
-   @|shrugitoff/tink/TinkMain.java|746|756|MODVERSION|field|shrugitoff.tink.TinkMain|MODVERSION|
-   @|shrugitoff/tink/TinkMain.java|905|916|CommonProxy|class|shrugitoff.tink.proxy.CommonProxy|false
-   @|shrugitoff/tink/TinkMain.java|775|785|SidedProxy|class|net.minecraftforge.fml.common.SidedProxy|false
-   @|shrugitoff/tink/TinkMain.java|786|796|clientSide|method|net.minecraftforge.fml.common.SidedProxy|clientSide|()Ljava/lang/String;
-   @|shrugitoff/tink/TinkMain.java|836|846|serverSide|method|net.minecraftforge.fml.common.SidedProxy|serverSide|()Ljava/lang/String;
-   @|shrugitoff/tink/TinkMain.java|905|916|CommonProxy|class|shrugitoff.tink.proxy.CommonProxy|false
-   @|shrugitoff/tink/TinkMain.java|917|922|proxy|field|shrugitoff.tink.TinkMain|proxy|
-   @|shrugitoff/tink/TinkMain.java|964|972|TinkMain|class|shrugitoff.tink.TinkMain|false
-   @|shrugitoff/tink/TinkMain.java|932|944|Mod.Instance|class|net.minecraftforge.fml.common.Mod.Instance|false
-   @|shrugitoff/tink/TinkMain.java|964|972|TinkMain|class|shrugitoff.tink.TinkMain|false
-   @|shrugitoff/tink/TinkMain.java|973|981|instance|field|shrugitoff.tink.TinkMain|instance|
-   @|shrugitoff/tink/TinkMain.java|1004|1010|Logger|class|org.apache.logging.log4j.Logger|false
-   @|shrugitoff/tink/TinkMain.java|1004|1010|Logger|class|org.apache.logging.log4j.Logger|false
-   @|shrugitoff/tink/TinkMain.java|1011|1017|logger|field|shrugitoff.tink.TinkMain|logger|
+   @|shrugitoff/tink/TinkMain.java|684|690|String|class|java.lang.String|false
+   @|shrugitoff/tink/TinkMain.java|684|690|String|class|java.lang.String|false
+   @|shrugitoff/tink/TinkMain.java|691|698|MODNAME|field|shrugitoff.tink.TinkMain|MODNAME|
+   @|shrugitoff/tink/TinkMain.java|743|749|String|class|java.lang.String|false
+   @|shrugitoff/tink/TinkMain.java|743|749|String|class|java.lang.String|false
+   @|shrugitoff/tink/TinkMain.java|750|760|MODVERSION|field|shrugitoff.tink.TinkMain|MODVERSION|
+   @|shrugitoff/tink/TinkMain.java|909|920|CommonProxy|class|shrugitoff.tink.proxy.CommonProxy|false
+   @|shrugitoff/tink/TinkMain.java|779|789|SidedProxy|class|net.minecraftforge.fml.common.SidedProxy|false
+   @|shrugitoff/tink/TinkMain.java|790|800|clientSide|method|net.minecraftforge.fml.common.SidedProxy|clientSide|()Ljava/lang/String;
+   @|shrugitoff/tink/TinkMain.java|840|850|serverSide|method|net.minecraftforge.fml.common.SidedProxy|serverSide|()Ljava/lang/String;
+   @|shrugitoff/tink/TinkMain.java|909|920|CommonProxy|class|shrugitoff.tink.proxy.CommonProxy|false
+   @|shrugitoff/tink/TinkMain.java|921|926|proxy|field|shrugitoff.tink.TinkMain|proxy|
+   @|shrugitoff/tink/TinkMain.java|968|976|TinkMain|class|shrugitoff.tink.TinkMain|false
+   @|shrugitoff/tink/TinkMain.java|936|948|Mod.Instance|class|net.minecraftforge.fml.common.Mod.Instance|false
+   @|shrugitoff/tink/TinkMain.java|968|976|TinkMain|class|shrugitoff.tink.TinkMain|false
+   @|shrugitoff/tink/TinkMain.java|977|985|instance|field|shrugitoff.tink.TinkMain|instance|
+   @|shrugitoff/tink/TinkMain.java|1008|1014|Logger|class|org.apache.logging.log4j.Logger|false
+   @|shrugitoff/tink/TinkMain.java|1008|1014|Logger|class|org.apache.logging.log4j.Logger|false
+   @|shrugitoff/tink/TinkMain.java|1015|1021|logger|field|shrugitoff.tink.TinkMain|logger|
    Method Start: preInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
-      @|shrugitoff/tink/TinkMain.java|1095|1100|event|param|shrugitoff.tink.TinkMain|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V|event|0
-      @|shrugitoff/tink/TinkMain.java|1027|1043|Mod.EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler|false
-      @|shrugitoff/tink/TinkMain.java|1061|1068|preInit|method|shrugitoff.tink.TinkMain|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
-      @|shrugitoff/tink/TinkMain.java|1069|1094|FMLPreInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPreInitializationEvent|false
-      @|shrugitoff/tink/TinkMain.java|1113|1119|logger|field|shrugitoff.tink.TinkMain|logger
-      @|shrugitoff/tink/TinkMain.java|1122|1127|event|param|shrugitoff.tink.TinkMain|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V|event|0
-      @|shrugitoff/tink/TinkMain.java|1128|1137|getModLog|method|net.minecraftforge.fml.common.event.FMLPreInitializationEvent|getModLog|()Lorg/apache/logging/log4j/Logger;
-      @|shrugitoff/tink/TinkMain.java|1150|1155|proxy|field|shrugitoff.tink.TinkMain|proxy
-      @|shrugitoff/tink/TinkMain.java|1156|1163|preInit|method|shrugitoff.tink.proxy.CommonProxy|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
-      @|shrugitoff/tink/TinkMain.java|1164|1169|event|param|shrugitoff.tink.TinkMain|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V|event|0
+      @|shrugitoff/tink/TinkMain.java|1099|1104|event|param|shrugitoff.tink.TinkMain|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V|event|0
+      @|shrugitoff/tink/TinkMain.java|1031|1047|Mod.EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler|false
+      @|shrugitoff/tink/TinkMain.java|1065|1072|preInit|method|shrugitoff.tink.TinkMain|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
+      @|shrugitoff/tink/TinkMain.java|1073|1098|FMLPreInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPreInitializationEvent|false
+      @|shrugitoff/tink/TinkMain.java|1117|1123|logger|field|shrugitoff.tink.TinkMain|logger
+      @|shrugitoff/tink/TinkMain.java|1126|1131|event|param|shrugitoff.tink.TinkMain|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V|event|0
+      @|shrugitoff/tink/TinkMain.java|1132|1141|getModLog|method|net.minecraftforge.fml.common.event.FMLPreInitializationEvent|getModLog|()Lorg/apache/logging/log4j/Logger;
+      @|shrugitoff/tink/TinkMain.java|1154|1159|proxy|field|shrugitoff.tink.TinkMain|proxy
+      @|shrugitoff/tink/TinkMain.java|1160|1167|preInit|method|shrugitoff.tink.proxy.CommonProxy|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
+      @|shrugitoff/tink/TinkMain.java|1168|1173|event|param|shrugitoff.tink.TinkMain|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V|event|0
    Method End: preInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
    Method Start: init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
-      @|shrugitoff/tink/TinkMain.java|1249|1250|e|param|shrugitoff.tink.TinkMain|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V|e|0
-      @|shrugitoff/tink/TinkMain.java|1187|1203|Mod.EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler|false
-      @|shrugitoff/tink/TinkMain.java|1221|1225|init|method|shrugitoff.tink.TinkMain|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
-      @|shrugitoff/tink/TinkMain.java|1226|1248|FMLInitializationEvent|class|net.minecraftforge.fml.common.event.FMLInitializationEvent|false
-      @|shrugitoff/tink/TinkMain.java|1263|1268|proxy|field|shrugitoff.tink.TinkMain|proxy
-      @|shrugitoff/tink/TinkMain.java|1269|1273|init|method|shrugitoff.tink.proxy.CommonProxy|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
-      @|shrugitoff/tink/TinkMain.java|1274|1275|e|param|shrugitoff.tink.TinkMain|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V|e|0
+      @|shrugitoff/tink/TinkMain.java|1253|1254|e|param|shrugitoff.tink.TinkMain|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V|e|0
+      @|shrugitoff/tink/TinkMain.java|1191|1207|Mod.EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler|false
+      @|shrugitoff/tink/TinkMain.java|1225|1229|init|method|shrugitoff.tink.TinkMain|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+      @|shrugitoff/tink/TinkMain.java|1230|1252|FMLInitializationEvent|class|net.minecraftforge.fml.common.event.FMLInitializationEvent|false
+      @|shrugitoff/tink/TinkMain.java|1267|1272|proxy|field|shrugitoff.tink.TinkMain|proxy
+      @|shrugitoff/tink/TinkMain.java|1273|1277|init|method|shrugitoff.tink.proxy.CommonProxy|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+      @|shrugitoff/tink/TinkMain.java|1278|1279|e|param|shrugitoff.tink.TinkMain|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V|e|0
    Method End: init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
    Method Start: postInit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
-      @|shrugitoff/tink/TinkMain.java|1363|1364|e|param|shrugitoff.tink.TinkMain|postInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V|e|0
-      @|shrugitoff/tink/TinkMain.java|1293|1309|Mod.EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler|false
-      @|shrugitoff/tink/TinkMain.java|1327|1335|postInit|method|shrugitoff.tink.TinkMain|postInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
-      @|shrugitoff/tink/TinkMain.java|1336|1362|FMLPostInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPostInitializationEvent|false
-      @|shrugitoff/tink/TinkMain.java|1377|1382|proxy|field|shrugitoff.tink.TinkMain|proxy
-      @|shrugitoff/tink/TinkMain.java|1383|1391|postInit|method|shrugitoff.tink.proxy.CommonProxy|postInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
-      @|shrugitoff/tink/TinkMain.java|1392|1393|e|param|shrugitoff.tink.TinkMain|postInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V|e|0
+      @|shrugitoff/tink/TinkMain.java|1367|1368|e|param|shrugitoff.tink.TinkMain|postInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V|e|0
+      @|shrugitoff/tink/TinkMain.java|1297|1313|Mod.EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler|false
+      @|shrugitoff/tink/TinkMain.java|1331|1339|postInit|method|shrugitoff.tink.TinkMain|postInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
+      @|shrugitoff/tink/TinkMain.java|1340|1366|FMLPostInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPostInitializationEvent|false
+      @|shrugitoff/tink/TinkMain.java|1381|1386|proxy|field|shrugitoff.tink.TinkMain|proxy
+      @|shrugitoff/tink/TinkMain.java|1387|1395|postInit|method|shrugitoff.tink.proxy.CommonProxy|postInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
+      @|shrugitoff/tink/TinkMain.java|1396|1397|e|param|shrugitoff.tink.TinkMain|postInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V|e|0
    Method End: postInit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
 Class End  : shrugitoff.tink.TinkMain
 endProcessing "shrugitoff/tink/TinkMain.java"

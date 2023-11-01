@@ -11,9 +11,9 @@ import shrugitoff.tink.proxy.CommonProxy;
 
 @Mod(modid = TinkMain.MODID, name = TinkMain.MODNAME, version = TinkMain.MODVERSION, dependencies = "required-after:forge@[14.23.5.2847,)", useMetadata = true)
 public class TinkMain {
-    public static final String MODID = "modtut";
+    public static final String MODID = "shrugitoff";
     public static final String MODNAME = "Mod tutorials";
-    public static final String MODVERSION= "0.0.2";
+    public static final String MODVERSION= "0.0.3";
 
     @SidedProxy(clientSide = "shrugitoff.tink.proxy.ClientProxy", serverSide = "shrugitoff.tink.proxy.ServerProxy")
     public static CommonProxy proxy;

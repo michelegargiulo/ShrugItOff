@@ -9,9 +9,9 @@ See https://gist.github.com/TheCurle/fe7ad3ede188cbdd15c235cc75d52d4a for more i
 :compileApiJava UP-TO-DATE
 :processApiResources UP-TO-DATE
 :apiClasses UP-TO-DATE
-:sourceMainJava
+:sourceMainJava UP-TO-DATE
 :compileJava
-:processResources UP-TO-DATE
+:processResources
 :classes
 :jar
 :sourceTestJava UP-TO-DATE
@@ -28,8 +28,7 @@ See https://gist.github.com/TheCurle/fe7ad3ede188cbdd15c235cc75d52d4a for more i
 :extractAnnotationsJar
 :extractRangemapReplacedMain
 C:\Users\Eliezer Miron\Desktop\MinecraftModding\ShrugItOff\Shrug\build\sources\main\java
-:retromapReplacedMain
-remapping source...
+:retromapReplacedMain UP-TO-DATE
 :sourceJar
 :assemble
 :check UP-TO-DATE
@@ -37,4 +36,4 @@ remapping source...
 
 BUILD SUCCESSFUL
 
-Total time: 2.659 secs
+Total time: 2.839 secs

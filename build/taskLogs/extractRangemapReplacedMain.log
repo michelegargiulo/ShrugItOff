@@ -1,11 +1,14 @@
 Unsupposrted library path: C:\Users\Eliezer Miron\Desktop\MinecraftModding\ShrugItOff\Shrug\build\classes\api
 Unsupposrted library path: C:\Users\Eliezer Miron\Desktop\MinecraftModding\ShrugItOff\Shrug\build\resources\api
 Symbol range map extraction starting
-Processing 5 files
-startProcessing "shrugitoff/tink/LivingAttackEventHandler.java" md5: eedec387aa882b3984ccb1a09be65f16
+Processing 6 files
+startProcessing "shrugitoff/tink/LivingAttackEventHandler.java" md5: f29238e97469c1d93f94884d965efd75
 endProcessing "shrugitoff/tink/LivingAttackEventHandler.java"
 
-startProcessing "shrugitoff/tink/TinkMain.java" md5: 5c563ae29ba9f79cd00eefe5517d0b40
+startProcessing "shrugitoff/tink/ShrugConfig.java" md5: afc85d35388f4db916833e8e3b5e82db
+endProcessing "shrugitoff/tink/ShrugConfig.java"
+
+startProcessing "shrugitoff/tink/TinkMain.java" md5: fb969ae7a93474df575dd1bfb7edc397
 endProcessing "shrugitoff/tink/TinkMain.java"
 
 startProcessing "shrugitoff/tink/proxy/ClientProxy.java" md5: d8f586352c49adaf90904bc8d6a11937

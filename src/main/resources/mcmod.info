@@ -2,7 +2,7 @@
 {
   "modid": "shrugitoff",
   "name": "Tink!",
-  "description": "Based on Mod Tutorial by McJty",
+  "description": "Adds a chance for damage to be 'shrugged off', scaling with the targets toughness.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
