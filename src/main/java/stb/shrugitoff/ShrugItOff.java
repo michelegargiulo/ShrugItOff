@@ -16,7 +16,7 @@ public class ShrugItOff {
 
     public static final String MODID = "shrugitoff";
     public static final String MODNAME = "Shrug It Off!";
-    public static final String MODVERSION = "0.1.0";
+    public static final String MODVERSION = "0.1.2";
 
     @Mod.Instance
     public static ShrugItOff instance;

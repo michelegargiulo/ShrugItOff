@@ -4,6 +4,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.ai.attributes.AbstractAttributeMap;
 import net.minecraft.entity.ai.attributes.IAttributeInstance;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.*;
 import net.minecraft.util.text.TextComponentString;
@@ -11,6 +12,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import stb.shrugitoff.config.ModConfig;
 
 import java.util.Arrays;
@@ -42,6 +45,39 @@ public class LivingAttackEventHandler {
         // If world is remote, return
         if(world.isRemote) {
             return;
+        }
+
+        // If the entity being attacked is in the blacklist, or not in the whitelist, return
+        String entityId;
+        if(livingEntity instanceof EntityPlayer) {
+            entityId = "minecraft:player";
+        }
+        else {
+            try {
+                // This line of code is copied from Ancient Warfare 3, probably like 5 years old now...
+                // May not be the best way to do this, feel free to replace
+                ResourceLocation victimResourceLocation = EntityRegistry.getEntry(livingEntity.getClass()).getRegistryName();
+                entityId = victimResourceLocation.toString();
+            }
+            catch (NullPointerException npe) {
+                logToChat(ModConfig.logLogic,
+                        "[ERROR] Failed to retrieve entity resource location; cannot perform entity white/blacklist check!",
+                        attacker, livingEntity);
+                return;
+            }
+        }
+        boolean entityIsInList = Arrays.asList(ModConfig.entityBlacklist).contains(entityId);
+        if(ModConfig.useEntityWhitelist && !entityIsInList){
+            logToChat(ModConfig.logLogic,
+                    "[LOGIC] Damage won't be shrugged: entity is not in whitelist.",
+                    attacker, livingEntity);
+            return; // If we are using an entity whitelist, and the event entity is NOT on it, do nothing and return.
+        }
+        if(!ModConfig.useEntityWhitelist && entityIsInList){
+            logToChat(ModConfig.logLogic,
+                    "[LOGIC] Damage won't be shrugged: entity is blacklisted.",
+                    attacker, livingEntity);
+            return; // If we are using an entity blacklist, and the event entity is on it, do nothing and return.
         }
 
         // If it is an excluded item, return

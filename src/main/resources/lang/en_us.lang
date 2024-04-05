@@ -1,8 +1,10 @@
 shrugitoff.config.log_damage_sources=Log Damage Sources
 shrugitoff.config.log_chances=Log Chances
 shrugitoff.config.use_whitelist=Use Whitelist
+shrugitoff.config.use_entity_whitelist=Use Entity Whitelist
 shrugitoff.config.whitelist=Whitelist
 shrugitoff.config.blacklist=Blacklist
+shrugitoff.config.entity_blacklist=Entity Blacklist
 shrugitoff.config.disable_sound=Disable Sound
 shrugitoff.config.small_damage_sources=Small Damage Sources
 shrugitoff.config.item_blacklist=Item Blacklist

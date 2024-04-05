@@ -51,6 +51,13 @@ public class ModConfig {
             "If True, only the damage sources specified in the whitelist can be avoided"})
     public static boolean useWhitelist = false;
 
+    @Config.Name("useEntityWhitelist")
+    @Config.LangKey(ShrugItOff.MODID + ".config.use_entity_whitelist")
+    @Config.Comment({"Controls the list of entities that can shrug off damage with this mod.",
+            "If true, flips the entityBlacklist to a whitelist; in that case, " +
+            "only the entities included in the entityBlacklist can shrug off damage."})
+    public static boolean useEntityWhitelist = false;
+
     @Config.Name("ignoreUnblockableAttribute")
     @Config.LangKey(ShrugItOff.MODID + ".config.ignore_unblockable")
     @Config.Comment({"If true, the 'Unblockable' attribute of Damage Sources will be ignored, and such sources can be shrugged",
@@ -127,6 +134,18 @@ public class ModConfig {
             "avaritia:infinity_hoe",
             "avaritia:infinity_bow",
     };
+
+    @Config.Name("entityBlacklist")
+    @Config.LangKey(ShrugItOff.MODID + ".config.entity_blacklist")
+    @Config.Comment("Entities in this list will not be able to utilize the effects of this mod, " +
+            "regardless of how much toughness they have (Shrug chance always = 0%.)" +
+            "This list becomes a whitelist instead if 'useEntityWhitelist' is enabled." +
+            "In that case, ONLY entities in this list will benefit from this mod." +
+            "Format is MODID:ENTITYID. For players, use 'minecraft:player'.")
+    public static String[] entityBlacklist = new String[] {
+
+    };
+
 
     @Config.Name("smallDamageSources")
     @Config.LangKey(ShrugItOff.MODID + ".config.small_damage_sources")
